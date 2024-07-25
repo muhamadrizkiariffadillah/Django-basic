@@ -14,4 +14,4 @@ class Employee(models.Model):
 
 
     def __str__(self) -> str:
-        return self.full_name
+        return str(self.full_name)
