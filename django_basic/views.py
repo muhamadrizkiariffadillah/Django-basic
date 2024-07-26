@@ -3,8 +3,7 @@ from django.shortcuts import render
 from employees.models import Employee
 
 def home(request):
-    employees = Employee.objects.get()
-    print(employees)
+    employees = Employee.objects.filter()
     context = {
         'employee':employees,
     }
