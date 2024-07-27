@@ -6,4 +6,7 @@ from employees.models import Employee
 # Create your views here.
 def employee_detail(request,pk):
     employee = get_object_or_404(Employee,pk=pk)
-    HttpResponse(employee)
+    context:dict = {
+        'employee':employee,
+    }
+    return render(request,'employee_detail.html',context)
